@@ -15,8 +15,8 @@ public class UserService {
     //avisar e instanciar os repositórios
     @Autowired
     private UserRepository userRepository;
-    @Autowired
-    private TaskRepository taskRepository;
+    // @Autowired
+    // private TaskRepository taskRepository;
 
     // public UserService(UserRepository userRepository, TaskRepository taskRepository) {
     //     this.userRepository = userRepository;
@@ -41,7 +41,7 @@ public class UserService {
         obj.setId(null);
         obj = this.userRepository.save(obj);
         //ao criar a conta, criar tasks
-        this.taskRepository.saveAll(obj.getTasks());
+        // this.taskRepository.saveAll(obj.getTasks());
         return obj;
     }
 
